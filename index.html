@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-id="Program Studi S1 Teknik Industri | Universitas Tidar" data-en="Bachelor of Industrial Engineering | Universitas Tidar">Program Studi S1 Teknik Industri | Universitas Tidar</title>
+  <meta name="description" content="Situs resmi Program Studi S1 Teknik Industri, Fakultas Teknik Universitas Tidar, Magelang. Informasi pendaftaran, akademik, dan layanan mahasiswa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F7F6F2',
+            ink: '#111111',
+            muted: '#6B6B6B',
+            line: '#E5E3DC',
+            green: '#2E4A3D',
+            gold: '#E8B33A',
+            brown: '#6B4F3A',
+          },
+          fontFamily: {
+            head: ['"Inter Tight"', 'ui-sans-serif', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'sans-serif'],
+            accent: ['"Instrument Serif"', 'ui-serif', 'serif'],
+          },
+          maxWidth: { site: '1280px' },
+        },
+      },
+    };
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, sans-serif; font-size: 16px; line-height: 1.6; }
+    @media (min-width: 768px) { body { font-size: 17px; } }
+    section[id], footer[id] { scroll-margin-top: 84px; }
+
+    .h1 { font-family: "Inter Tight", sans-serif; font-weight: 700; font-size: clamp(2.5rem, 6vw, 5.5rem); letter-spacing: -0.03em; line-height: 0.95; }
+    .h2 { font-family: "Inter Tight", sans-serif; font-weight: 600; font-size: clamp(1.75rem, 3.5vw, 2.75rem); letter-spacing: -0.02em; line-height: 1.05; }
+    .h3 { font-family: "Inter Tight", sans-serif; font-weight: 600; font-size: 1.25rem; line-height: 1.3; letter-spacing: -0.01em; }
+    .kicker { font-family: "Inter Tight", sans-serif; font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: #2E4A3D; }
+    .kicker-gold { color: #E8B33A; }
+    .serif { font-family: "Instrument Serif", serif; font-style: italic; }
+    .num { font-family: "Inter Tight", sans-serif; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1; }
+    .section-pad { padding-top: 64px; padding-bottom: 64px; }
+    @media (min-width: 768px) { .section-pad { padding-top: 96px; padding-bottom: 96px; } }
+
+    html :focus-visible { outline: 2px solid #2E4A3D; outline-offset: 2px; }
+    .on-dark:focus-visible { outline-color: #E8B33A; }
+
+    .btn { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px solid #111111; padding: 0.85rem 1.75rem; font-family: "Inter Tight", sans-serif; font-weight: 500; font-size: 0.875rem; letter-spacing: 0.02em; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+    .btn:hover { background: #111111; color: #F7F6F2; }
+    .btn-green { background: #2E4A3D; border-color: #2E4A3D; color: #F7F6F2; }
+    .btn-green:hover { background: #111111; border-color: #111111; color: #F7F6F2; }
+    .btn-sm { padding: 0.55rem 1.1rem; font-size: 0.8125rem; min-height: 44px; }
+
+    .lang-btn { position: relative; }
+    .lang-btn::after { content: ""; position: absolute; top: -10px; bottom: -10px; }
+    [data-lang-btn="id"]::after { left: -10px; right: 0; }
+    [data-lang-btn="en"]::after { left: 0; right: -10px; }
+
+    .arrow { display: inline-block; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    .ghost { display: inline-flex; align-items: center; gap: 0.5rem; font-family: "Inter Tight", sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; color: #111111; border-bottom: 1px solid #111111; padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+    .ghost:hover, .ghost:focus-visible { color: #2E4A3D; border-color: #2E4A3D; }
+    .ghost:hover .arrow { transform: translateX(4px); }
+
+    .card { display: block; background: #F7F6F2; border: 1px solid #E5E3DC; transition: border-color 0.25s; }
+    .card:hover, .card:focus-visible { border-color: #2E4A3D; }
+    .card:hover .arrow { transform: translateX(4px); }
+
+    .media { position: relative; background: #E5E3DC; transition: background-color 0.35s; }
+    .media-label { color: #4A4A4A; transition: color 0.35s; }
+    .card:hover .media { background: #2E4A3D; }
+    .card:hover .media-label { color: #F7F6F2; }
+    .media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(15%); transition: filter 0.4s; }
+    .card:hover .media img { filter: grayscale(0%); }
+
+    .quick { display: block; border: 1px solid rgba(247, 246, 242, 0.22); padding: 1.5rem; transition: background-color 0.25s, border-color 0.25s; }
+    .quick:hover { background: rgba(247, 246, 242, 0.07); border-color: rgba(247, 246, 242, 0.55); }
+    .quick:hover .arrow { transform: translateX(4px); }
+    .quick-soon { border-style: dashed; }
+
+    .pill { display: inline-flex; align-items: center; border: 1px solid currentColor; border-radius: 999px; padding: 0.15rem 0.65rem; font-family: "Inter Tight", sans-serif; font-size: 10.5px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; }
+
+    #siteHeader { border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+    #siteHeader.scrolled { border-bottom-color: #E5E3DC; }
+
+    .js .reveal { opacity: 0; transform: translateY(16px); }
+    .js .reveal.is-visible { opacity: 1; transform: none; transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); transition-delay: var(--d, 0s); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .reveal { opacity: 1; transform: none; }
+      .arrow, .card, .media, .quick, .ghost { transition: none; }
+    }
+
+    .lang-btn.is-on { background: #111111; color: #F7F6F2; border-color: #111111; }
+
+    /* Nav desktop: dropdown (Profil, Akademik, Dosen, Kemahasiswaan) */
+    .nav-drop { position: relative; }
+    .nav-caret { position: relative; }
+    .nav-caret::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: -12px; }
+    .nav-caret .caret, .menu-toggle .caret { transition: transform 0.2s; }
+    .nav-drop.is-open .nav-caret .caret { transform: rotate(180deg); }
+    .nav-drop.is-open .nav-parent { color: #2E4A3D; }
+    .nav-panel { display: none; position: absolute; left: 0; top: 100%; z-index: 50; padding-top: 16px; }
+    .nav-drop.is-open > .nav-panel { display: block; }
+    .nav-panel > ul { min-width: 252px; border: 1px solid #E5E3DC; background: #F7F6F2; padding: 6px 0; }
+    .nav-panel a { display: block; padding: 11px 18px; font-family: "Inter Tight", sans-serif; font-size: 13.5px; color: #111111; transition: background-color 0.15s, color 0.15s; }
+    .nav-panel a:hover, .nav-panel a:focus-visible { background: rgba(46, 74, 61, 0.07); color: #2E4A3D; }
+    .nav-panel a[aria-current] { color: #2E4A3D; }
+
+    /* Menu mobile: submenu accordion */
+    .menu-sub { padding: 0 0 10px 20px; }
+    .menu-sub-link { display: block; font-family: "Inter Tight", sans-serif; font-size: 15px; line-height: 1.4; color: #6B6B6B; border-left: 1px solid #E5E3DC; padding: 12px 18px; }
+    .menu-sub-link:hover, .menu-sub-link:focus-visible { color: #2E4A3D; border-color: #2E4A3D; }
+    .menu-link { transition: color 0.2s; }
+    .menu-link:hover, .menu-link:focus-visible { color: #2E4A3D; }
+    .menu-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:border focus:border-ink focus:bg-paper focus:px-4 focus:py-2 focus:text-sm" data-id="Langsung ke konten" data-en="Skip to content">Langsung ke konten</a>
+
+  <!-- Header: sticky, wordmark dua baris, nav, toggle bahasa, CTA -->
+  <header id="siteHeader" class="sticky top-0 z-50 bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex w-full max-w-site items-center justify-between gap-6 px-6 py-4 md:px-12">
+      <a href="#beranda" class="font-head text-[13px] font-bold uppercase leading-[1.15] tracking-[0.06em]">
+        <span class="block">S1 Teknik Industri</span>
+        <!-- <span class="block text-green">Untidar</span> -->
+      </a>
+
+      <nav aria-label="Navigasi utama" class="hidden items-center gap-6 xl:flex">
+        <div class="nav-drop">
+          <div class="flex items-center">
+            <a href="#tentang" class="nav-parent font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Profil" data-en="Profile">Profil</a>
+            <button type="button" class="nav-caret flex h-11 w-8 items-center justify-center" aria-expanded="false" aria-haspopup="true" aria-controls="nav-profil" data-aria-id="Submenu Profil" data-aria-en="Profile submenu" aria-label="Submenu Profil">
+              <svg class="caret h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="nav-panel" id="nav-profil">
+            <ul>
+              <li><a href="#tentang" data-id="Tentang Program" data-en="About the Program">Tentang Program</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-program-studi/" target="_blank" rel="noopener" data-id="Profil Program Studi" data-en="Program Profile">Profil Program Studi</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-visi-misi-tujuan-sasaran/" target="_blank" rel="noopener" data-id="Visi, Misi &amp; Tujuan" data-en="Vision, Mission &amp; Goals">Visi, Misi &amp; Tujuan</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-lulusan/" target="_blank" rel="noopener" data-id="Profil Lulusan" data-en="Graduate Profile">Profil Lulusan</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-pengelola-program-studi/" target="_blank" rel="noopener" data-id="Pengelola Program Studi" data-en="Program Management">Pengelola Program Studi</a></li>
+              <li><a href="https://ft.untidar.ac.id/akreditasi/" target="_blank" rel="noopener" data-id="Akreditasi" data-en="Accreditation">Akreditasi</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <div class="flex items-center">
+            <a href="akademik.html" class="nav-parent font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Akademik" data-en="Academics">Akademik</a>
+            <button type="button" class="nav-caret flex h-11 w-8 items-center justify-center" aria-expanded="false" aria-haspopup="true" aria-controls="nav-akademik" data-aria-id="Submenu Akademik" data-aria-en="Academics submenu" aria-label="Submenu Akademik">
+              <svg class="caret h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="nav-panel" id="nav-akademik">
+            <ul>
+              <li><a href="akademik.html#mata-kuliah" data-id="Mata Kuliah" data-en="Courses">Mata Kuliah</a></li>
+              <li><a href="#kalender" data-id="Kalender Akademik" data-en="Academic Calendar">Kalender Akademik</a></li>
+              <li><a href="akademik.html#prosedur" data-id="Prosedur Akademik" data-en="Academic Procedures">Prosedur Akademik</a></li>
+              <li><a href="akademik.html#formulir" data-id="Formulir &amp; Unduhan" data-en="Forms &amp; Downloads">Formulir &amp; Unduhan</a></li>
+              <li><a href="https://ft.untidar.ac.id/capstone-design/" target="_blank" rel="noopener" data-id="Capstone Design" data-en="Capstone Design">Capstone Design</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <div class="flex items-center">
+            <a href="dosen.html" class="nav-parent font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Dosen" data-en="Lecturers">Dosen</a>
+            <button type="button" class="nav-caret flex h-11 w-8 items-center justify-center" aria-expanded="false" aria-haspopup="true" aria-controls="nav-dosen" data-aria-id="Submenu Dosen" data-aria-en="Lecturers submenu" aria-label="Submenu Dosen">
+              <svg class="caret h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="nav-panel" id="nav-dosen">
+            <ul>
+              <li><a href="dosen.html" data-id="Daftar Dosen" data-en="Lecturer Directory">Daftar Dosen</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-tenaga-kependidikan-program-studi/" target="_blank" rel="noopener" data-id="Tenaga Kependidikan" data-en="Administrative Staff">Tenaga Kependidikan</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <div class="flex items-center">
+            <a href="kemahasiswaan.html" class="nav-parent font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Kemahasiswaan" data-en="Student Affairs">Kemahasiswaan</a>
+            <button type="button" class="nav-caret flex h-11 w-8 items-center justify-center" aria-expanded="false" aria-haspopup="true" aria-controls="nav-kemahasiswaan" data-aria-id="Submenu Kemahasiswaan" data-aria-en="Student Affairs submenu" aria-label="Submenu Kemahasiswaan">
+              <svg class="caret h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="nav-panel" id="nav-kemahasiswaan">
+            <ul>
+              <li><a href="https://ft.untidar.ac.id/kemahasiswaan/himpunan-mahasiswa/himpunan-mahasiswa-teknik-industri/" target="_blank" rel="noopener" data-id="Himpunan Mahasiswa" data-en="Student Association">Himpunan Mahasiswa</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-mesin-s1-program-mbkm/" target="_blank" rel="noopener" data-id="MBKM" data-en="Independent Study (MBKM)">MBKM</a></li>
+              <li><a href="https://ft.untidar.ac.id/loker-ft/" target="_blank" rel="noopener" data-id="Info Karir &amp; Loker" data-en="Career &amp; Jobs">Info Karir &amp; Loker</a></li>
+              <li><a href="kemahasiswaan.html#alumni" data-id="Alumni &amp; Tracer Study" data-en="Alumni &amp; Tracer Study">Alumni &amp; Tracer Study</a></li>
+              <li><a href="https://ft.untidar.ac.id/daftar-kerjasama/" target="_blank" rel="noopener" data-id="Daftar Kerjasama" data-en="Partnerships">Daftar Kerjasama</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="#berita" class="font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Berita" data-en="News">Berita</a>
+        <a href="https://ft.untidar.ac.id/teknik-mesin-s1-fasilitas/" target="_blank" rel="noopener" class="font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Fasilitas" data-en="Facilities">Fasilitas</a>
+        <a href="#kontak" class="font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Kontak" data-en="Contact">Kontak</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="flex rounded-full border border-ink/20" role="group" aria-label="Pilih bahasa">
+          <button type="button" data-lang-btn="id" class="lang-btn rounded-l-full px-3 py-1 font-head text-[11px] font-semibold tracking-wider transition" aria-pressed="true" aria-label="Bahasa Indonesia">ID</button>
+          <button type="button" data-lang-btn="en" class="lang-btn rounded-r-full px-3 py-1 font-head text-[11px] font-semibold tracking-wider transition" aria-pressed="false" aria-label="English language">EN</button>
+        </div>
+        <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="btn btn-green btn-sm hidden sm:inline-flex" data-id="Daftar" data-en="Apply">Daftar</a>
+        <button id="menuBtn" type="button" class="flex h-11 w-11 items-center justify-center border border-ink/20 xl:hidden" aria-expanded="false" aria-controls="mobileMenu" data-aria-id="Buka menu navigasi" data-aria-en="Open navigation menu" aria-label="Buka menu navigasi">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu: drawer layar penuh -->
+  <div id="mobileMenu" class="fixed inset-0 z-[60] hidden flex-col bg-paper xl:hidden">
+    <div class="mx-auto flex w-full max-w-site items-center justify-between px-6 py-4 md:px-12">
+      <span class="font-head text-[13px] font-bold uppercase tracking-[0.06em]">Teknik Industri</span>
+      <button id="menuClose" type="button" class="flex h-11 w-11 items-center justify-center border border-ink/20" data-aria-id="Tutup menu" data-aria-en="Close menu" aria-label="Tutup menu">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Navigasi seluler" class="mx-auto flex w-full max-w-site flex-1 flex-col items-start gap-1 overflow-y-auto px-6 py-4 md:px-12">
+      <div class="menu-group w-full">
+        <button type="button" class="menu-toggle h2 flex w-full items-center justify-between gap-4 py-2 text-left" aria-expanded="false" aria-controls="m-profil"><span data-id="Profil" data-en="Profile">Profil</span>
+          <svg class="caret h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul id="m-profil" class="menu-sub hidden">
+          <li><a href="#tentang" class="menu-sub-link" data-id="Tentang Program" data-en="About the Program">Tentang Program</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-program-studi/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Profil Program Studi" data-en="Program Profile">Profil Program Studi</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-visi-misi-tujuan-sasaran/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Visi, Misi &amp; Tujuan" data-en="Vision, Mission &amp; Goals">Visi, Misi &amp; Tujuan</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-lulusan/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Profil Lulusan" data-en="Graduate Profile">Profil Lulusan</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-pengelola-program-studi/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Pengelola Program Studi" data-en="Program Management">Pengelola Program Studi</a></li>
+          <li><a href="https://ft.untidar.ac.id/akreditasi/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Akreditasi" data-en="Accreditation">Akreditasi</a></li>
+        </ul>
+      </div>
+      <div class="menu-group w-full">
+        <button type="button" class="menu-toggle h2 flex w-full items-center justify-between gap-4 py-2 text-left" aria-expanded="false" aria-controls="m-akademik"><span data-id="Akademik" data-en="Academics">Akademik</span>
+          <svg class="caret h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul id="m-akademik" class="menu-sub hidden">
+          <li><a href="akademik.html#mata-kuliah" class="menu-sub-link" data-id="Mata Kuliah" data-en="Courses">Mata Kuliah</a></li>
+          <li><a href="#kalender" class="menu-sub-link" data-id="Kalender Akademik" data-en="Academic Calendar">Kalender Akademik</a></li>
+          <li><a href="akademik.html#prosedur" class="menu-sub-link" data-id="Prosedur Akademik" data-en="Academic Procedures">Prosedur Akademik</a></li>
+          <li><a href="akademik.html#formulir" class="menu-sub-link" data-id="Formulir &amp; Unduhan" data-en="Forms &amp; Downloads">Formulir &amp; Unduhan</a></li>
+          <li><a href="https://ft.untidar.ac.id/capstone-design/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Capstone Design" data-en="Capstone Design">Capstone Design</a></li>
+        </ul>
+      </div>
+      <div class="menu-group w-full">
+        <button type="button" class="menu-toggle h2 flex w-full items-center justify-between gap-4 py-2 text-left" aria-expanded="false" aria-controls="m-dosen"><span data-id="Dosen" data-en="Lecturers">Dosen</span>
+          <svg class="caret h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul id="m-dosen" class="menu-sub hidden">
+          <li><a href="dosen.html" class="menu-sub-link" data-id="Daftar Dosen" data-en="Lecturer Directory">Daftar Dosen</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-tenaga-kependidikan-program-studi/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Tenaga Kependidikan" data-en="Administrative Staff">Tenaga Kependidikan</a></li>
+        </ul>
+      </div>
+      <div class="menu-group w-full">
+        <button type="button" class="menu-toggle h2 flex w-full items-center justify-between gap-4 py-2 text-left" aria-expanded="false" aria-controls="m-kemahasiswaan"><span data-id="Kemahasiswaan" data-en="Student Affairs">Kemahasiswaan</span>
+          <svg class="caret h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul id="m-kemahasiswaan" class="menu-sub hidden">
+          <li><a href="https://ft.untidar.ac.id/kemahasiswaan/himpunan-mahasiswa/himpunan-mahasiswa-teknik-industri/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Himpunan Mahasiswa" data-en="Student Association">Himpunan Mahasiswa</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-mesin-s1-program-mbkm/" target="_blank" rel="noopener" class="menu-sub-link" data-id="MBKM" data-en="Independent Study (MBKM)">MBKM</a></li>
+          <li><a href="https://ft.untidar.ac.id/loker-ft/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Info Karir &amp; Loker" data-en="Career &amp; Jobs">Info Karir &amp; Loker</a></li>
+          <li><a href="kemahasiswaan.html#alumni" class="menu-sub-link" data-id="Alumni &amp; Tracer Study" data-en="Alumni &amp; Tracer Study">Alumni &amp; Tracer Study</a></li>
+          <li><a href="https://ft.untidar.ac.id/daftar-kerjasama/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Daftar Kerjasama" data-en="Partnerships">Daftar Kerjasama</a></li>
+        </ul>
+      </div>
+      <a href="#berita" class="menu-link h2 py-2" data-id="Berita" data-en="News">Berita</a>
+      <a href="https://ft.untidar.ac.id/teknik-mesin-s1-fasilitas/" target="_blank" rel="noopener" class="menu-link h2 py-2" data-id="Fasilitas" data-en="Facilities">Fasilitas</a>
+      <a href="#kontak" class="menu-link h2 py-2" data-id="Kontak" data-en="Contact">Kontak</a>
+    </nav>
+    <div class="mx-auto w-full max-w-site px-6 pb-10 md:px-12">
+      <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="btn btn-green w-full justify-center" data-id="Daftar Sekarang" data-en="Apply Now">Daftar Sekarang</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- Hero: split asimetris 7/5 + strip statistik -->
+    <section id="beranda">
+      <div class="mx-auto w-full max-w-site px-6 pb-16 pt-16 md:px-12 md:pb-24 md:pt-24">
+        <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <div class="lg:col-span-7">
+            <!-- <p class="kicker reveal" data-id="S1 Teknik Industri / Untidar Magelang" data-en="Bachelor of Industrial Engineering / Untidar Magelang">S1 Teknik Industri / Untidar Magelang</p> -->
+            <h1 class="h1 mt-6 reveal" style="--d:.08s" data-id="Membentuk Insinyur Industri yang Kompeten, Inovatif, dan Berjiwa Wirausaha" data-en="Shaping Competent, Innovative, and Entrepreneurial Industrial Engineers">Membentuk Insinyur Industri yang Kompeten, Inovatif, dan Berjiwa Wirausaha</h1>
+            <p class="mt-7 max-w-xl text-muted reveal" style="--d:.16s" data-id="Program Studi S1 Teknik Industri Fakultas Teknik Universitas Tidar berdiri berdasarkan Kepmendikbudristek No. 842/E/0/2022. Kurikulumnya disusun berdasarkan Capaian Pembelajaran sebanyak 144 SKS di Kota Magelang." data-en="The Bachelor of Industrial Engineering program at the Faculty of Engineering, Universitas Tidar, was established under Ministry of Education Decree No. 842/E/0/2022. Its curriculum is built on 144 credits of Learning Outcomes in Magelang.">Program Studi S1 Teknik Industri Fakultas Teknik Universitas Tidar berdiri berdasarkan Kepmendikbudristek No. 842/E/0/2022. Kurikulumnya disusun berdasarkan Capaian Pembelajaran sebanyak 144 SKS di Kota Magelang.</p>
+          </div>
+          <div class="flex flex-col justify-end gap-5 lg:col-span-5 lg:items-start lg:pt-28">
+            <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="btn btn-green reveal" style="--d:.24s"><span data-id="Daftar Sekarang" data-en="Apply Now">Daftar Sekarang</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+            <a href="#mahasiswa-aktif" class="ghost reveal self-start" style="--d:.32s"><span data-id="Untuk Mahasiswa Aktif" data-en="For Active Students">Untuk Mahasiswa Aktif</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Strip statistik 4 kolom, dipisah garis 1px -->
+        <div class="mt-16 grid grid-cols-2 gap-px border-t border-line bg-line md:mt-24 md:grid-cols-4">
+          <div class="bg-paper p-6 md:p-8">
+            <p class="num text-4xl md:text-5xl" data-count="144">144</p>
+            <p class="kicker mt-3" data-id="SKS Wajib" data-en="Required Credits">SKS Wajib</p>
+          </div>
+          <div class="bg-paper p-6 md:p-8">
+            <p class="num text-4xl md:text-5xl" data-count="8">8</p>
+            <p class="kicker mt-3" data-id="Semester (Min. 3,5 Tahun)" data-en="Semesters (Min. 3.5 Years)">Semester (Min. 3,5 Tahun)</p>
+          </div>
+          <div class="bg-paper p-6 md:p-8">
+            <p class="num text-4xl md:text-5xl" data-count="6">6</p>
+            <p class="kicker mt-3" data-id="Dosen Tetap" data-en="Permanent Lecturers">Dosen Tetap</p>
+          </div>
+          <div class="bg-paper p-6 md:p-8">
+            <p class="num text-4xl md:text-5xl">Baik</p>
+            <p class="kicker mt-3" data-id="Akreditasi s.d. 2029" data-en="Accreditation to 2029">Akreditasi s.d. 2029</p>
+          </div>
+        </div>
+        <p class="mt-3 text-xs text-muted" data-id="Sumber data: ft.untidar.ac.id (profil program studi dan akreditasi)." data-en="Data source: ft.untidar.ac.id (program profile and accreditation).">Sumber data: ft.untidar.ac.id (profil program studi dan akreditasi).</p>
+      </div>
+    </section>
+
+    <!-- Section 01: Tentang Program (4/8 + 3 kartu pilar) -->
+    <section id="tentang" class="border-t border-line section-pad">
+      <div class="mx-auto w-full max-w-site px-6 md:px-12">
+        <div class="grid gap-8 lg:grid-cols-12 lg:gap-8">
+          <div class="lg:col-span-4">
+            <p class="kicker reveal">&nbsp;&nbsp;<span data-id="Tentang Program" data-en="About the Program">Tentang Program</span></p>
+          </div>
+          <div class="lg:col-span-8">
+            <h2 class="h2 reveal" data-id="Mengenal Teknik Industri UNTIDAR" data-en="Getting to Know Industrial Engineering at UNTIDAR">Mengenal Teknik Industri UNTIDAR</h2>
+            <div class="mt-7 grid gap-6 text-muted md:grid-cols-2">
+              <p class="reveal" style="--d:.08s" data-id="Program Studi S1 Teknik Industri merupakan program studi baru di lingkungan Fakultas Teknik Universitas Tidar, bersama S1 Teknologi Informasi dan S1 Teknik Mekatronika. Pembukaannya ditetapkan melalui Keputusan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia Nomor 842/E/0/2022." data-en="The Bachelor of Industrial Engineering is a new program at the Faculty of Engineering, Universitas Tidar, alongside Information Systems and Mechanical Engineering. It was established by Decree of the Minister of Education, Culture, Research, and Technology of the Republic of Indonesia No. 842/E/0/2022.">Program Studi S1 Teknik Industri merupakan program studi baru di lingkungan Fakultas Teknik Universitas Tidar, bersama S1 Teknologi Informasi dan S1 Teknik Mekatronika. Pembukaannya ditetapkan melalui Keputusan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia Nomor 842/E/0/2022.</p>
+              <p class="reveal" style="--d:.16s" data-id="Program studi ini didukung 6 dosen tetap dengan jabatan fungsional akademik asisten ahli dan 17 tenaga kependidikan. Struktur kurikulum disusun berdasarkan Capaian Pembelajaran dengan total 144 SKS, ditempuh paling sedikit 7 semester dan paling lama 14 semester." data-en="The program is supported by 6 permanent lecturers with assistant professor functional positions and 17 administrative staff. Its curriculum is structured around Learning Outcomes with a total of 144 credits, completed in a minimum of 7 and a maximum of 14 semesters.">Program studi ini didukung 6 dosen tetap dengan jabatan fungsional akademik asisten ahli dan 17 tenaga kependidikan. Struktur kurikulum disusun berdasarkan Capaian Pembelajaran dengan total 144 SKS, ditempuh paling sedikit 7 semester dan paling lama 14 semester.</p>
+            </div>
+            <a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-program-studi/" target="_blank" rel="noopener" class="ghost mt-8 inline-flex reveal" style="--d:.24s"><span data-id="Baca profil lengkap di website FT" data-en="Read the full profile on the FT website">Baca profil lengkap di website FT</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+          </div>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <a href="https://ft.untidar.ac.id/teknik-industri-s1-visi-misi-tujuan-sasaran/" target="_blank" rel="noopener" class="card group p-6 md:p-8 reveal">
+            <h3 class="h3" data-id="Visi" data-en="Vision">Visi</h3>
+            <p class="serif mt-4 text-lg leading-snug text-green md:text-xl" data-id="“Mengembangkan ilmu Teknik Industri berkelanjutan pada bidang pendidikan dan riset inovatif serta berjiwa kewirausahaan.”" data-en="“Advancing sustainable Industrial Engineering knowledge through education, innovative research, and entrepreneurship.”">“Mengembangkan ilmu Teknik Industri berkelanjutan pada bidang pendidikan dan riset inovatif serta berjiwa kewirausahaan.”</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-head text-[13px] font-medium"><span data-id="Lihat visi dan misi" data-en="View vision and mission">Lihat visi dan misi</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></span>
+          </a>
+          <a href="https://ft.untidar.ac.id/teknik-industri-s1-mata-kuliah/" target="_blank" rel="noopener" class="card group p-6 md:p-8 reveal" style="--d:.08s">
+            <h3 class="h3" data-id="Kurikulum" data-en="Curriculum">Kurikulum</h3>
+            <p class="mt-4 text-[15px] leading-relaxed text-muted" data-id="144 SKS berbasis Capaian Pembelajaran, ditempuh dalam 7 sampai 14 semester, dengan dua kelompok minat: manufaktur dan manajemen." data-en="144 credits based on Learning Outcomes, completed in 7 to 14 semesters, with two interest groups: manufacturing and management.">144 SKS berbasis Capaian Pembelajaran, ditempuh dalam 7 sampai 14 semester, dengan dua kelompok minat: manufaktur dan manajemen.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-head text-[13px] font-medium"><span data-id="Lihat mata kuliah" data-en="View courses">Lihat mata kuliah</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></span>
+          </a>
+          <a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-lulusan/" target="_blank" rel="noopener" class="card group p-6 md:p-8 reveal" style="--d:.16s">
+            <h3 class="h3" data-id="Prospek Karier" data-en="Career Prospects">Prospek Karier</h3>
+            <p class="mt-4 text-[15px] leading-relaxed text-muted" data-id="Lulusan menerapkan sains dasar untuk memecahkan masalah industri, merancang sistem terintegrasi, dan bekerja profesional beretika dengan jiwa kewirausahaan." data-en="Graduates apply fundamental science to solve industrial problems, design integrated systems, and work professionally and ethically with an entrepreneurial mindset.">Lulusan menerapkan sains dasar untuk memecahkan masalah industri, merancang sistem terintegrasi, dan bekerja profesional beretika dengan jiwa kewirausahaan.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-head text-[13px] font-medium"><span data-id="Lihat profil lulusan" data-en="View graduate profile">Lihat profil lulusan</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: Untuk Calon Mahasiswa (grid 2x2) -->
+    <section id="calon-mahasiswa" class="border-t border-line section-pad">
+      <div class="mx-auto w-full max-w-site px-6 md:px-12">
+        <header class="mb-12 grid items-end gap-5 md:grid-cols-12">
+          <div class="md:col-span-8">
+            <p class="kicker mb-4 reveal"><span class="text-muted">02</span>&nbsp;&nbsp;<span data-id="Untuk Calon Mahasiswa" data-en="For Prospective Students">Untuk Calon Mahasiswa</span></p>
+            <h2 class="h2 reveal" style="--d:.08s" data-id="Penerimaan Mahasiswa Baru" data-en="New Student Admissions">Penerimaan Mahasiswa Baru</h2>
+          </div>
+          <p class="text-sm text-muted md:col-span-4 md:text-right reveal" style="--d:.16s" data-id="Pendaftaran daring melalui Ujian Masuk UNTIDAR." data-en="Online admissions through the UNTIDAR Entrance Exam.">Pendaftaran daring melalui Ujian Masuk UNTIDAR.</p>
+        </header>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="card group flex flex-col p-6 md:p-8 reveal">
+            <p class="num text-sm text-muted">01</p>
+            <h3 class="h3 mt-4" data-id="Alur Pendaftaran" data-en="Admission Flow">Alur Pendaftaran</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted" data-id="Pendaftaran, seleksi, hingga pengumuman dilayani di satu portal Ujian Masuk UNTIDAR. Pantau setiap tahapan resmi di sana." data-en="Registration, selection, and announcements are served through the UNTIDAR Entrance Exam portal. Follow every official stage there.">Pendaftaran, seleksi, hingga pengumuman dilayani di satu portal Ujian Masuk UNTIDAR. Pantau setiap tahapan resmi di sana.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-head text-[13px] font-medium"><span data-id="Daftar via UM UNTIDAR" data-en="Apply via UM UNTIDAR">Daftar via UM UNTIDAR</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></span>
+          </a>
+          <a href="https://kemahasiswaan.untidar.ac.id/" target="_blank" rel="noopener" class="card group flex flex-col p-6 md:p-8 reveal" style="--d:.08s">
+            <p class="num text-sm text-muted">02</p>
+            <h3 class="h3 mt-4" data-id="Biaya &amp; Beasiswa" data-en="Fees &amp; Scholarships">Biaya &amp; Beasiswa</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted" data-id="Informasi UKT dan jalur beasiswa disampaikan resmi pada periode pendaftaran melalui kanal kemahasiswaan." data-en="Tuition (UKT) and scholarship information is officially announced during the admission period through student affairs channels.">Informasi UKT dan jalur beasiswa disampaikan resmi pada periode pendaftaran melalui kanal kemahasiswaan.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-head text-[13px] font-medium"><span data-id="Info Kemahasiswaan" data-en="Student Affairs Info">Info Kemahasiswaan</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></span>
+          </a>
+          <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="card group flex flex-col p-6 md:p-8 reveal" style="--d:.16s">
+            <p class="num text-sm text-muted">03</p>
+            <h3 class="h3 mt-4" data-id="Syarat Masuk" data-en="Entry Requirements">Syarat Masuk</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted" data-id="Persyaratan administrasi dan akademik calon mahasiswa diumumkan resmi di portal Ujian Masuk UNTIDAR." data-en="Administrative and academic requirements for applicants are officially announced on the UNTIDAR Entrance Exam portal.">Persyaratan administrasi dan akademik calon mahasiswa diumumkan resmi di portal Ujian Masuk UNTIDAR.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-head text-[13px] font-medium"><span data-id="Portal Ujian Masuk" data-en="Entrance Exam Portal">Portal Ujian Masuk</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></span>
+          </a>
+          <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="card group flex flex-col p-6 md:p-8 reveal" style="--d:.24s">
+            <p class="num text-sm text-muted">04</p>
+            <h3 class="h3 mt-4" data-id="Jadwal Seleksi" data-en="Selection Schedule">Jadwal Seleksi</h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted" data-id="Jadwal ujian dan pengumuman mengikuti tahun akademik berjalan, diumumkan di portal resmi." data-en="Exam and announcement schedules follow the current academic year, announced on the official portal.">Jadwal ujian dan pengumuman mengikuti tahun akademik berjalan, diumumkan di portal resmi.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-head text-[13px] font-medium"><span data-id="Portal pendaftaran resmi" data-en="Official admissions portal">Portal pendaftaran resmi</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 03: Untuk Mahasiswa Aktif (highlight box hijau) -->
+    <section id="mahasiswa-aktif" class="border-t border-line section-pad">
+      <div class="mx-auto w-full max-w-site px-6 md:px-12">
+        <p class="kicker mb-10 reveal"><span class="text-muted">03</span>&nbsp;&nbsp;<span data-id="Untuk Mahasiswa Aktif" data-en="For Active Students">Untuk Mahasiswa Aktif</span></p>
+
+        <div class="bg-green p-8 text-paper md:p-12 reveal" style="--d:.08s">
+          <div class="grid items-end gap-6 md:grid-cols-12">
+            <div class="md:col-span-8">
+              <h2 class="h2" data-id="Pintasan layanan mahasiswa" data-en="Student service shortcuts">Pintasan layanan mahasiswa</h2>
+            </div>
+            <p class="serif text-lg leading-snug text-gold md:col-span-4 md:text-right" data-id="Empat akses untuk kebutuhan akademik harian." data-en="Four accesses for daily academic needs.">Empat akses untuk kebutuhan akademik harian.</p>
+          </div>
+
+          <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <a href="#kalender" class="quick on-dark">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="3" y="4.5" width="18" height="16" rx="1"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
+              <p class="mt-5 font-head text-base font-semibold" data-id="Kalender Akademik" data-en="Academic Calendar">Kalender Akademik</p>
+              <p class="mt-1.5 text-sm text-paper/70" data-id="Agenda KRS, ujian, dan libur." data-en="KRS, exams, and holidays.">Agenda KRS, ujian, dan libur.</p>
+              <svg class="arrow mt-4 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+            </a>
+            <a href="https://new.sipadu.untidar.ac.id/" target="_blank" rel="noopener" class="quick on-dark">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <p class="mt-5 font-head text-base font-semibold" data-id="Jadwal Kuliah" data-en="Class Schedule">Jadwal Kuliah</p>
+              <p class="mt-1.5 text-sm text-paper/70" data-id="Jadwal per program studi di SIPADU." data-en="Program schedules in SIPADU.">Jadwal per program studi di SIPADU.</p>
+              <svg class="arrow mt-4 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+            </a>
+            <!-- TODO: portal e-learning belum punya URL resmi, jangan dibuat link mati -->
+            <div class="quick quick-soon on-dark" aria-disabled="true">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><rect x="3" y="4.5" width="18" height="12" rx="1"/><path d="M8 20.5h8M12 16.5v4"/></svg>
+              <p class="mt-5 font-head text-base font-semibold" data-id="Portal E-Learning" data-en="E-Learning Portal">Portal E-Learning</p>
+              <p class="mt-1.5 text-sm text-paper/70" data-id="Akses materi kelas daring." data-en="Access online class materials.">Akses materi kelas daring.</p>
+              <span class="pill mt-4 border-gold bg-gold text-ink" data-id="Segera" data-en="Soon">Segera</span>
+            </div>
+            <a href="#kontak" class="quick on-dark">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5"/></svg>
+              <p class="mt-5 font-head text-base font-semibold" data-id="Kontak Dosen Wali" data-en="Academic Advisor Contact">Kontak Dosen Wali</p>
+              <p class="mt-1.5 text-sm text-paper/70" data-id="Telepon dan WhatsApp program studi." data-en="Program phone and WhatsApp.">Telepon dan WhatsApp program studi.</p>
+              <svg class="arrow mt-4 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 04: Kalender Akademik (list + divider) -->
+    <section id="kalender" class="border-t border-line section-pad">
+      <div class="mx-auto w-full max-w-site px-6 md:px-12">
+        <header class="mb-12 grid items-end gap-5 md:grid-cols-12">
+          <div class="md:col-span-8">
+            <p class="kicker mb-4 reveal"><span class="text-muted">04</span>&nbsp;&nbsp;<span data-id="Kalender Akademik" data-en="Academic Calendar">Kalender Akademik</span></p>
+            <h2 class="h2 reveal" style="--d:.08s" data-id="Agenda Semester" data-en="Semester Agenda">Agenda Semester</h2>
+          </div>
+          <p class="text-sm text-muted md:col-span-4 md:text-right reveal" style="--d:.16s" data-id="*Jadwal contoh untuk keperluan tampilan." data-en="*Sample schedule for layout purposes.">*Jadwal contoh untuk keperluan tampilan.</p>
+        </header>
+
+        <div class="reveal">
+          <div class="grid gap-2 border-t border-line py-5 md:grid-cols-12 md:items-baseline">
+            <p class="num text-sm font-semibold text-green md:col-span-3">02-06 Feb 2026</p>
+            <p class="font-head text-base font-semibold md:col-span-6 md:text-lg" data-id="Pengisian KRS" data-en="KRS Registration">Pengisian KRS</p>
+            <p class="md:col-span-3 md:text-right"><span class="pill text-green" data-id="Akademik" data-en="Academic">Akademik</span></p>
+          </div>
+          <div class="grid gap-2 border-t border-line py-5 md:grid-cols-12 md:items-baseline">
+            <p class="num text-sm font-semibold text-green md:col-span-3">09-14 Mar 2026</p>
+            <p class="font-head text-base font-semibold md:col-span-6 md:text-lg" data-id="Ujian Tengah Semester" data-en="Midterm Exams">Ujian Tengah Semester</p>
+            <p class="md:col-span-3 md:text-right"><span class="pill text-brown" data-id="Ujian" data-en="Exams">Ujian</span></p>
+          </div>
+          <div class="grid gap-2 border-t border-line py-5 md:grid-cols-12 md:items-baseline">
+            <p class="num text-sm font-semibold text-green md:col-span-3">19-22 Mar 2026</p>
+            <p class="font-head text-base font-semibold md:col-span-6 md:text-lg" data-id="Libur Idul Fitri 1447 H" data-en="Eid al-Fitr Holiday 1447 H">Libur Idul Fitri 1447 H</p>
+            <p class="md:col-span-3 md:text-right"><span class="pill text-muted" data-id="Libur" data-en="Holiday">Libur</span></p>
+          </div>
+          <div class="grid gap-2 border-t border-line py-5 md:grid-cols-12 md:items-baseline">
+            <p class="num text-sm font-semibold text-green md:col-span-3">11-16 Mei 2026</p>
+            <p class="font-head text-base font-semibold md:col-span-6 md:text-lg" data-id="Ujian Akhir Semester" data-en="Final Exams">Ujian Akhir Semester</p>
+            <p class="md:col-span-3 md:text-right"><span class="pill text-brown" data-id="Ujian" data-en="Exams">Ujian</span></p>
+          </div>
+          <div class="grid gap-2 border-y border-line py-5 md:grid-cols-12 md:items-baseline">
+            <p class="num text-sm font-semibold text-green md:col-span-3">20 Jun 2026</p>
+            <p class="font-head text-base font-semibold md:col-span-6 md:text-lg" data-id="Wisuda" data-en="Graduation">Wisuda</p>
+            <p class="md:col-span-3 md:text-right"><span class="pill text-green" data-id="Kemahasiswaan" data-en="Student Affairs">Kemahasiswaan</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05: Berita (3 kartu editorial) -->
+    <section id="berita" class="border-t border-line section-pad">
+      <div class="mx-auto w-full max-w-site px-6 md:px-12">
+        <header class="mb-12 grid items-end gap-5 md:grid-cols-12">
+          <div class="md:col-span-8">
+            <p class="kicker mb-4 reveal"><span class="text-muted">05</span>&nbsp;&nbsp;<span data-id="Berita" data-en="News">Berita</span></p>
+            <h2 class="h2 reveal" style="--d:.08s" data-id="Kabar Terbaru Program Studi" data-en="Latest Program News">Kabar Terbaru Program Studi</h2>
+          </div>
+          <p class="text-sm text-muted md:col-span-4 md:text-right reveal" style="--d:.16s" data-id="*Konten contoh, akan tersambung ke berita FT UNTIDAR." data-en="*Sample content, will connect to FT UNTIDAR news.">*Konten contoh, akan tersambung ke berita FT UNTIDAR.</p>
+        </header>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="card group reveal" style="cursor: default">
+            <div class="media aspect-[4/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <p class="kicker" data-id="Berita Prodi" data-en="Program News">Berita Prodi</p>
+              <h3 class="h3 mt-3 text-[17px]" data-id="Capstone Project Mahasiswa TI Kembangkan Solusi Lean untuk UMKM Magelang" data-en="TI Students' Capstone Project Develops Lean Solutions for Magelang SMEs">Capstone Project Mahasiswa TI Kembangkan Solusi Lean untuk UMKM Magelang</h3>
+              <p class="mt-4 text-xs text-muted" data-id="12 Oktober 2026" data-en="12 October 2026">12 Oktober 2026</p>
+            </div>
+          </article>
+          <article class="card group reveal" style="--d:.08s; cursor: default">
+            <div class="media aspect-[4/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <p class="kicker" data-id="Kegiatan" data-en="Activities">Kegiatan</p>
+              <h3 class="h3 mt-3 text-[17px]" data-id="Kunjungan Industri ke Kawasan Industri Semarang" data-en="Industrial Visit to the Semarang Industrial Estate">Kunjungan Industri ke Kawasan Industri Semarang</h3>
+              <p class="mt-4 text-xs text-muted" data-id="5 Oktober 2026" data-en="5 October 2026">5 Oktober 2026</p>
+            </div>
+          </article>
+          <article class="card group reveal" style="--d:.16s; cursor: default">
+            <div class="media aspect-[4/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <p class="kicker" data-id="Kuliah Umum" data-en="Public Lecture">Kuliah Umum</p>
+              <h3 class="h3 mt-3 text-[17px]" data-id="Lean Six Sigma di Era Industri 4.0" data-en="Lean Six Sigma in the Industry 4.0 Era">Lean Six Sigma di Era Industri 4.0</h3>
+              <p class="mt-4 text-xs text-muted" data-id="28 September 2026" data-en="28 September 2026">28 September 2026</p>
+            </div>
+          </article>
+        </div>
+
+        <a href="https://ft.untidar.ac.id/" target="_blank" rel="noopener" class="ghost mt-10 inline-flex reveal"><span data-id="Semua berita di website FT" data-en="All news on the FT website">Semua berita di website FT</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+      </div>
+    </section>
+
+    <!-- Section 06: CTA penutup -->
+    <section id="daftar" class="border-y border-line section-pad">
+      <div class="mx-auto grid w-full max-w-site items-end gap-8 px-6 md:px-12 lg:grid-cols-12">
+        <div class="lg:col-span-8">
+          <p class="kicker mb-4 reveal"><span class="text-muted">06</span>&nbsp;&nbsp;<span data-id="Pendaftaran" data-en="Admissions">Pendaftaran</span></p>
+          <h2 class="h2 reveal" style="--d:.08s" data-id="Siap bergabung dengan Teknik Industri UNTIDAR?" data-en="Ready to join Industrial Engineering at UNTIDAR?">Siap bergabung dengan Teknik Industri UNTIDAR?</h2>
+        </div>
+        <div class="lg:col-span-4 lg:justify-self-end reveal" style="--d:.16s">
+          <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="btn btn-green"><span data-id="Daftar Sekarang" data-en="Apply Now">Daftar Sekarang</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: 4 kolom -->
+  <footer id="kontak" class="bg-ink text-paper">
+    <div class="mx-auto grid w-full max-w-site gap-10 px-6 py-16 md:grid-cols-2 md:px-12 lg:grid-cols-4">
+      <div>
+        <p class="font-head text-[13px] font-bold uppercase leading-[1.15] tracking-[0.06em]">
+          <span class="block">Teknik Industri</span>
+          <span class="block text-gold">Untidar</span>
+        </p>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-paper/70" data-id="Program Studi S1 Teknik Industri, Fakultas Teknik, Universitas Tidar, Kota Magelang, Jawa Tengah." data-en="Bachelor of Industrial Engineering, Faculty of Engineering, Universitas Tidar, Magelang, Central Java.">Program Studi S1 Teknik Industri, Fakultas Teknik, Universitas Tidar, Kota Magelang, Jawa Tengah.</p>
+      </div>
+
+      <nav aria-label="Navigasi footer">
+        <p class="kicker kicker-gold" data-id="Navigasi" data-en="Navigation">Navigasi</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-paper/70">
+          <li><a href="#tentang" class="transition hover:text-paper" data-id="Program" data-en="Program">Program</a></li>
+          <li><a href="akademik.html" class="transition hover:text-paper" data-id="Akademik" data-en="Academics">Akademik</a></li>
+          <li><a href="dosen.html" class="transition hover:text-paper" data-id="Dosen" data-en="Lecturers">Dosen</a></li>
+          <li><a href="kemahasiswaan.html" class="transition hover:text-paper" data-id="Kemahasiswaan" data-en="Student Affairs">Kemahasiswaan</a></li>
+          <li><a href="#berita" class="transition hover:text-paper" data-id="Berita" data-en="News">Berita</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-mesin-s1-fasilitas/" target="_blank" rel="noopener" class="transition hover:text-paper" data-id="Fasilitas" data-en="Facilities">Fasilitas</a></li>
+          <li><a href="#kontak" class="transition hover:text-paper" data-id="Kontak" data-en="Contact">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="kicker kicker-gold" data-id="Kontak" data-en="Contact">Kontak</p>
+        <address class="mt-5 space-y-3 text-sm not-italic leading-relaxed text-paper/70">
+          <p data-id="Lobby Fakultas Teknik, Jl. Kapten Suparman 39 Potrobangsan, Magelang Utara, Jawa Tengah 56116" data-en="Faculty of Engineering Lobby, Jl. Kapten Suparman 39 Potrobangsan, North Magelang, Central Java 56116">Lobby Fakultas Teknik, Jl. Kapten Suparman 39 Potrobangsan, Magelang Utara, Jawa Tengah 56116</p>
+          <p data-id="Telp. (0293) 364113 · WA 0813-9347-1791" data-en="Tel. (0293) 364113 · WA 0813-9347-1791">Telp. (0293) 364113 · WA 0813-9347-1791</p>
+        </address>
+        <a href="https://ft.untidar.ac.id/kontak/" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 font-head text-[13px] font-medium text-gold transition hover:text-paper"><span data-id="Halaman kontak FT" data-en="FT contact page">Halaman kontak FT</span><svg class="arrow h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+      </div>
+
+      <div>
+        <p class="kicker kicker-gold" data-id="Sosial" data-en="Social">Sosial</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-paper/70">
+          <li><a href="https://www.instagram.com/ftuntidar" target="_blank" rel="noopener" class="inline-flex items-center gap-2 transition hover:text-paper"><span aria-hidden="true" class="inline-block h-1.5 w-1.5 bg-gold"></span>Instagram</a></li>
+          <li><a href="https://www.youtube.com/@fakultasteknikuntidar8841" target="_blank" rel="noopener" class="inline-flex items-center gap-2 transition hover:text-paper"><span aria-hidden="true" class="inline-block h-1.5 w-1.5 bg-gold"></span>YouTube</a></li>
+          <li><a href="https://www.facebook.com/untidar" target="_blank" rel="noopener" class="inline-flex items-center gap-2 transition hover:text-paper"><span aria-hidden="true" class="inline-block h-1.5 w-1.5 bg-gold"></span>Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-paper/10">
+      <div class="mx-auto flex w-full max-w-site flex-col gap-2 px-6 py-5 text-[11px] uppercase tracking-[0.12em] text-paper/50 md:flex-row md:items-center md:justify-between md:px-12">
+        <p data-id="© 2026 Teknik Industri Untidar · Magelang" data-en="© 2026 Industrial Engineering Untidar · Magelang">© 2026 Teknik Industri Untidar · Magelang</p>
+        <p data-id="Fakultas Teknik · Universitas Tidar" data-en="Faculty of Engineering · Universitas Tidar">Fakultas Teknik · Universitas Tidar</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* --- Toggle bahasa ID/EN (data-id / data-en + localStorage) --- */
+      var LANG_KEY = 'ti-untidar-lang';
+      function applyLang(lang) {
+        document.querySelectorAll('[data-id]').forEach(function (el) {
+          var v = el.getAttribute(lang === 'en' ? 'data-en' : 'data-id');
+          if (v !== null) el.textContent = v;
+        });
+        document.querySelectorAll('[data-aria-id]').forEach(function (el) {
+          el.setAttribute('aria-label', el.getAttribute(lang === 'en' ? 'data-aria-en' : 'data-aria-id'));
+        });
+        document.documentElement.setAttribute('lang', lang);
+        document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
+          var on = b.getAttribute('data-lang-btn') === lang;
+          b.classList.toggle('is-on', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+      }
+      var savedLang = 'id';
+      try { savedLang = localStorage.getItem(LANG_KEY) || 'id'; } catch (e) {}
+      applyLang(savedLang === 'en' ? 'en' : 'id');
+      document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
+        b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang-btn')); });
+      });
+
+      /* --- Nav desktop: dropdown (buka saat hover, fokus, atau klik caret) --- */
+      var navDrops = document.querySelectorAll('.nav-drop');
+      var suppressOpen = false;
+      function closeNavDrops(except) {
+        navDrops.forEach(function (d) {
+          if (d === except) return;
+          d.classList.remove('is-open');
+          var c = d.querySelector('.nav-caret');
+          if (c) c.setAttribute('aria-expanded', 'false');
+        });
+      }
+      navDrops.forEach(function (d) {
+        var caret = d.querySelector('.nav-caret');
+        function setOpen(open) {
+          if (open) closeNavDrops(d);
+          d.classList.toggle('is-open', open);
+          if (caret) caret.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        d.addEventListener('mouseenter', function () { setOpen(true); });
+        d.addEventListener('mouseleave', function () { setOpen(false); });
+        d.addEventListener('focusin', function () { if (suppressOpen) return; setOpen(true); });
+        d.addEventListener('focusout', function (e) {
+          if (!d.contains(e.relatedTarget)) setOpen(false);
+        });
+        if (caret) {
+          caret.addEventListener('click', function () { setOpen(!d.classList.contains('is-open')); });
+        }
+        d.querySelectorAll('.nav-panel a').forEach(function (a) {
+          a.addEventListener('click', function () { setOpen(false); });
+        });
+      });
+      document.addEventListener('click', function (e) {
+        var t = e.target;
+        if (!(t && t.closest && t.closest('.nav-drop'))) closeNavDrops(null);
+      });
+
+      /* --- Menu mobile: drawer layar penuh + accordion submenu --- */
+      var menuBtn = document.getElementById('menuBtn');
+      var menuClose = document.getElementById('menuClose');
+      var mobileMenu = document.getElementById('mobileMenu');
+      function setMenu(open) {
+        mobileMenu.classList.toggle('hidden', !open);
+        mobileMenu.classList.toggle('flex', open);
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+        if (open) { menuClose.focus(); } else { menuBtn.focus(); }
+      }
+      menuBtn.addEventListener('click', function () { setMenu(mobileMenu.classList.contains('hidden')); });
+      menuClose.addEventListener('click', function () { setMenu(false); });
+      mobileMenu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setMenu(false); });
+      });
+      mobileMenu.querySelectorAll('.menu-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          var panel = document.getElementById(btn.getAttribute('aria-controls'));
+          if (panel) panel.classList.toggle('hidden', expanded);
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        var openDrop = document.querySelector('.nav-drop.is-open');
+        if (openDrop) {
+          var oc = openDrop.querySelector('.nav-caret');
+          suppressOpen = true;
+          closeNavDrops(null);
+          if (oc) oc.focus();
+          suppressOpen = false;
+          return;
+        }
+        if (!mobileMenu.classList.contains('hidden')) setMenu(false);
+      });
+
+      /* --- Header: border-bottom saat scroll > 20px --- */
+      var header = document.getElementById('siteHeader');
+      function onScroll() { header.classList.toggle('scrolled', window.scrollY > 20); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* --- Scroll reveal: fade + translateY 16px, 500ms --- */
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var revealIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealIO.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { revealIO.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+
+      /* --- Count-up angka statistik saat masuk viewport --- */
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function animateCount(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        if (isNaN(target)) return;
+        if (reduceMotion) { el.textContent = target; return; }
+        var duration = 1200;
+        var start = null;
+        el.textContent = '0';
+        function step(ts) {
+          if (start === null) start = ts;
+          var p = Math.min((ts - start) / duration, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(eased * target);
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      var countEls = document.querySelectorAll('[data-count]');
+      if ('IntersectionObserver' in window) {
+        var countIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCount(entry.target);
+              countIO.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        countEls.forEach(function (el) { countIO.observe(el); });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* ===== Custom styles — Prodi S1 Teknik Industri UNTIDAR ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Blueprint grid pattern untuk hero / banner */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Accordion <details> */
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Tab semester (state aktif dikelola oleh JS) */
+.tab-btn {
+  color: #475569;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+.tab-btn:hover {
+  border-color: #0e7c4a;
+  color: #0e7c4a;
+}
+.tab-btn.is-active {
+  background: #0e7c4a;
+  border-color: #0e7c4a;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(14, 124, 74, 0.28);
+}
+
+/* Dot navigation (state aktif dikelola oleh JS) */
+.dot-link .dot.is-active {
+  background: #f97316;
+  transform: scale(1.45);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.22);
+}
+.dot-link .dot.is-active ~ span,
+.dot-link:hover .dot.is-active {
+  background: #f97316;
+}
+
+/* Baris tabel zebra */
+#semesterBody tr:nth-child(even) {
+  background: #f8faf9;
+}
+#semesterBody tr:hover {
+  background: #f4f7f5;
+}
+
+/* Scrollbar tab semester yang di-swipe di mobile */
+.tab-btn::-webkit-scrollbar,
+[role="tablist"]::-webkit-scrollbar {
+  height: 4px;
+}
+[role="tablist"]::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::selection {
+  background: #0e7c4a;
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 3px;
+}

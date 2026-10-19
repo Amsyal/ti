@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-id="Profil Dosen | Program Studi S1 Teknik Industri UNTIDAR" data-en="Lecturers | Bachelor of Industrial Engineering UNTIDAR">Profil Dosen | Program Studi S1 Teknik Industri UNTIDAR</title>
+  <meta name="description" content="Daftar dosen Program Studi S1 Teknik Industri, Fakultas Teknik Universitas Tidar, beserta jabatan fungsional akademiknya." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#F7F6F2',
+            ink: '#111111',
+            muted: '#6B6B6B',
+            line: '#E5E3DC',
+            green: '#2E4A3D',
+            gold: '#E8B33A',
+            brown: '#6B4F3A',
+          },
+          fontFamily: {
+            head: ['"Inter Tight"', 'ui-sans-serif', 'sans-serif'],
+            sans: ['Inter', 'ui-sans-serif', 'sans-serif'],
+            accent: ['"Instrument Serif"', 'ui-serif', 'serif'],
+          },
+          maxWidth: { site: '1280px' },
+        },
+      },
+    };
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, sans-serif; font-size: 16px; line-height: 1.6; }
+    @media (min-width: 768px) { body { font-size: 17px; } }
+    section[id], footer[id] { scroll-margin-top: 84px; }
+
+    .h1 { font-family: "Inter Tight", sans-serif; font-weight: 700; font-size: clamp(2.5rem, 6vw, 5.5rem); letter-spacing: -0.03em; line-height: 0.95; }
+    .h2 { font-family: "Inter Tight", sans-serif; font-weight: 600; font-size: clamp(1.75rem, 3.5vw, 2.75rem); letter-spacing: -0.02em; line-height: 1.05; }
+    .h3 { font-family: "Inter Tight", sans-serif; font-weight: 600; font-size: 1.25rem; line-height: 1.3; letter-spacing: -0.01em; }
+    .kicker { font-family: "Inter Tight", sans-serif; font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.15em; color: #2E4A3D; }
+    .kicker-gold { color: #E8B33A; }
+    .serif { font-family: "Instrument Serif", serif; font-style: italic; }
+    .num { font-family: "Inter Tight", sans-serif; font-weight: 700; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1; }
+    .section-pad { padding-top: 64px; padding-bottom: 64px; }
+    @media (min-width: 768px) { .section-pad { padding-top: 96px; padding-bottom: 96px; } }
+
+    html :focus-visible { outline: 2px solid #2E4A3D; outline-offset: 2px; }
+    .on-dark:focus-visible { outline-color: #E8B33A; }
+
+    .btn { display: inline-flex; align-items: center; gap: 0.6rem; border: 1px solid #111111; padding: 0.85rem 1.75rem; font-family: "Inter Tight", sans-serif; font-weight: 500; font-size: 0.875rem; letter-spacing: 0.02em; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+    .btn:hover { background: #111111; color: #F7F6F2; }
+    .btn-green { background: #2E4A3D; border-color: #2E4A3D; color: #F7F6F2; }
+    .btn-green:hover { background: #111111; border-color: #111111; color: #F7F6F2; }
+    .btn-sm { padding: 0.55rem 1.1rem; font-size: 0.8125rem; min-height: 44px; }
+
+    .lang-btn { position: relative; }
+    .lang-btn::after { content: ""; position: absolute; top: -10px; bottom: -10px; }
+    [data-lang-btn="id"]::after { left: -10px; right: 0; }
+    [data-lang-btn="en"]::after { left: 0; right: -10px; }
+
+    .arrow { display: inline-block; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+
+    .ghost { display: inline-flex; align-items: center; gap: 0.5rem; font-family: "Inter Tight", sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; color: #111111; border-bottom: 1px solid #111111; padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
+    .ghost:hover, .ghost:focus-visible { color: #2E4A3D; border-color: #2E4A3D; }
+    .ghost:hover .arrow { transform: translateX(4px); }
+
+    .card { display: block; background: #F7F6F2; border: 1px solid #E5E3DC; transition: border-color 0.25s; }
+    .card:hover, .card:focus-visible { border-color: #2E4A3D; }
+    .card:hover .arrow { transform: translateX(4px); }
+
+    .media { position: relative; background: #E5E3DC; transition: background-color 0.35s; }
+    .media-label { color: #4A4A4A; transition: color 0.35s; }
+    .card:hover .media { background: #2E4A3D; }
+    .card:hover .media-label { color: #F7F6F2; }
+    .media img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(15%); transition: filter 0.4s; }
+    .card:hover .media img { filter: grayscale(0%); }
+
+    .quick { display: block; border: 1px solid rgba(247, 246, 242, 0.22); padding: 1.5rem; transition: background-color 0.25s, border-color 0.25s; }
+    .quick:hover { background: rgba(247, 246, 242, 0.07); border-color: rgba(247, 246, 242, 0.55); }
+    .quick:hover .arrow { transform: translateX(4px); }
+    .quick-soon { border-style: dashed; }
+
+    .pill { display: inline-flex; align-items: center; border: 1px solid currentColor; border-radius: 999px; padding: 0.15rem 0.65rem; font-family: "Inter Tight", sans-serif; font-size: 10.5px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; }
+
+    #siteHeader { border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+    #siteHeader.scrolled { border-bottom-color: #E5E3DC; }
+
+    .js .reveal { opacity: 0; transform: translateY(16px); }
+    .js .reveal.is-visible { opacity: 1; transform: none; transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); transition-delay: var(--d, 0s); }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .reveal { opacity: 1; transform: none; }
+      .arrow, .card, .media, .quick, .ghost { transition: none; }
+    }
+
+    .lang-btn.is-on { background: #111111; color: #F7F6F2; border-color: #111111; }
+
+    /* Nav desktop: dropdown (Profil, Akademik, Dosen, Kemahasiswaan) */
+    .nav-drop { position: relative; }
+    .nav-caret { position: relative; }
+    .nav-caret::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: -12px; }
+    .nav-caret .caret, .menu-toggle .caret { transition: transform 0.2s; }
+    .nav-drop.is-open .nav-caret .caret { transform: rotate(180deg); }
+    .nav-drop.is-open .nav-parent { color: #2E4A3D; }
+    .nav-panel { display: none; position: absolute; left: 0; top: 100%; z-index: 50; padding-top: 16px; }
+    .nav-drop.is-open > .nav-panel { display: block; }
+    .nav-panel > ul { min-width: 252px; border: 1px solid #E5E3DC; background: #F7F6F2; padding: 6px 0; }
+    .nav-panel a { display: block; padding: 11px 18px; font-family: "Inter Tight", sans-serif; font-size: 13.5px; color: #111111; transition: background-color 0.15s, color 0.15s; }
+    .nav-panel a:hover, .nav-panel a:focus-visible { background: rgba(46, 74, 61, 0.07); color: #2E4A3D; }
+    .nav-panel a[aria-current] { color: #2E4A3D; }
+
+    /* Menu mobile: submenu accordion */
+    .menu-sub { padding: 0 0 10px 20px; }
+    .menu-sub-link { display: block; font-family: "Inter Tight", sans-serif; font-size: 15px; line-height: 1.4; color: #6B6B6B; border-left: 1px solid #E5E3DC; padding: 12px 18px; }
+    .menu-sub-link:hover, .menu-sub-link:focus-visible { color: #2E4A3D; border-color: #2E4A3D; }
+    .menu-link { transition: color 0.2s; }
+    .menu-link:hover, .menu-link:focus-visible { color: #2E4A3D; }
+    .menu-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:border focus:border-ink focus:bg-paper focus:px-4 focus:py-2 focus:text-sm" data-id="Langsung ke konten" data-en="Skip to content">Langsung ke konten</a>
+
+  <!-- Header: sticky, wordmark dua baris, nav, toggle bahasa, CTA -->
+  <header id="siteHeader" class="sticky top-0 z-50 bg-paper/90 backdrop-blur">
+    <div class="mx-auto flex w-full max-w-site items-center justify-between gap-6 px-6 py-4 md:px-12">
+      <a href="index.html#beranda" class="font-head text-[13px] font-bold uppercase leading-[1.15] tracking-[0.06em]">
+        <span class="block">Teknik Industri</span>
+        <span class="block text-green">Untidar</span>
+      </a>
+
+      <nav aria-label="Navigasi utama" class="hidden items-center gap-6 xl:flex">
+        <div class="nav-drop">
+          <div class="flex items-center">
+            <a href="index.html#tentang" class="nav-parent font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Profil" data-en="Profile">Profil</a>
+            <button type="button" class="nav-caret flex h-11 w-8 items-center justify-center" aria-expanded="false" aria-haspopup="true" aria-controls="nav-profil" data-aria-id="Submenu Profil" data-aria-en="Profile submenu" aria-label="Submenu Profil">
+              <svg class="caret h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="nav-panel" id="nav-profil">
+            <ul>
+              <li><a href="index.html#tentang" data-id="Tentang Program" data-en="About the Program">Tentang Program</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-program-studi/" target="_blank" rel="noopener" data-id="Profil Program Studi" data-en="Program Profile">Profil Program Studi</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-visi-misi-tujuan-sasaran/" target="_blank" rel="noopener" data-id="Visi, Misi &amp; Tujuan" data-en="Vision, Mission &amp; Goals">Visi, Misi &amp; Tujuan</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-lulusan/" target="_blank" rel="noopener" data-id="Profil Lulusan" data-en="Graduate Profile">Profil Lulusan</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-pengelola-program-studi/" target="_blank" rel="noopener" data-id="Pengelola Program Studi" data-en="Program Management">Pengelola Program Studi</a></li>
+              <li><a href="https://ft.untidar.ac.id/akreditasi/" target="_blank" rel="noopener" data-id="Akreditasi" data-en="Accreditation">Akreditasi</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <div class="flex items-center">
+            <a href="akademik.html" class="nav-parent font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Akademik" data-en="Academics">Akademik</a>
+            <button type="button" class="nav-caret flex h-11 w-8 items-center justify-center" aria-expanded="false" aria-haspopup="true" aria-controls="nav-akademik" data-aria-id="Submenu Akademik" data-aria-en="Academics submenu" aria-label="Submenu Akademik">
+              <svg class="caret h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="nav-panel" id="nav-akademik">
+            <ul>
+              <li><a href="akademik.html#mata-kuliah" data-id="Mata Kuliah" data-en="Courses">Mata Kuliah</a></li>
+              <li><a href="index.html#kalender" data-id="Kalender Akademik" data-en="Academic Calendar">Kalender Akademik</a></li>
+              <li><a href="akademik.html#prosedur" data-id="Prosedur Akademik" data-en="Academic Procedures">Prosedur Akademik</a></li>
+              <li><a href="akademik.html#formulir" data-id="Formulir &amp; Unduhan" data-en="Forms &amp; Downloads">Formulir &amp; Unduhan</a></li>
+              <li><a href="https://ft.untidar.ac.id/capstone-design/" target="_blank" rel="noopener" data-id="Capstone Design" data-en="Capstone Design">Capstone Design</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <div class="flex items-center">
+            <a href="dosen.html" aria-current="page" class="nav-parent font-head text-[13.5px] font-medium tracking-wide text-green transition hover:text-green" data-id="Dosen" data-en="Lecturers">Dosen</a>
+            <button type="button" class="nav-caret flex h-11 w-8 items-center justify-center" aria-expanded="false" aria-haspopup="true" aria-controls="nav-dosen" data-aria-id="Submenu Dosen" data-aria-en="Lecturers submenu" aria-label="Submenu Dosen">
+              <svg class="caret h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="nav-panel" id="nav-dosen">
+            <ul>
+              <li><a href="dosen.html" aria-current="page" data-id="Daftar Dosen" data-en="Lecturer Directory">Daftar Dosen</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-tenaga-kependidikan-program-studi/" target="_blank" rel="noopener" data-id="Tenaga Kependidikan" data-en="Administrative Staff">Tenaga Kependidikan</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-drop">
+          <div class="flex items-center">
+            <a href="kemahasiswaan.html" class="nav-parent font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Kemahasiswaan" data-en="Student Affairs">Kemahasiswaan</a>
+            <button type="button" class="nav-caret flex h-11 w-8 items-center justify-center" aria-expanded="false" aria-haspopup="true" aria-controls="nav-kemahasiswaan" data-aria-id="Submenu Kemahasiswaan" data-aria-en="Student Affairs submenu" aria-label="Submenu Kemahasiswaan">
+              <svg class="caret h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="nav-panel" id="nav-kemahasiswaan">
+            <ul>
+              <li><a href="https://ft.untidar.ac.id/kemahasiswaan/himpunan-mahasiswa/himpunan-mahasiswa-teknik-industri/" target="_blank" rel="noopener" data-id="Himpunan Mahasiswa" data-en="Student Association">Himpunan Mahasiswa</a></li>
+              <li><a href="https://ft.untidar.ac.id/teknik-mesin-s1-program-mbkm/" target="_blank" rel="noopener" data-id="MBKM" data-en="Independent Study (MBKM)">MBKM</a></li>
+              <li><a href="https://ft.untidar.ac.id/loker-ft/" target="_blank" rel="noopener" data-id="Info Karir &amp; Loker" data-en="Career &amp; Jobs">Info Karir &amp; Loker</a></li>
+              <li><a href="kemahasiswaan.html#alumni" data-id="Alumni &amp; Tracer Study" data-en="Alumni &amp; Tracer Study">Alumni &amp; Tracer Study</a></li>
+              <li><a href="https://ft.untidar.ac.id/daftar-kerjasama/" target="_blank" rel="noopener" data-id="Daftar Kerjasama" data-en="Partnerships">Daftar Kerjasama</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="index.html#berita" class="font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Berita" data-en="News">Berita</a>
+        <a href="https://ft.untidar.ac.id/teknik-mesin-s1-fasilitas/" target="_blank" rel="noopener" class="font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Fasilitas" data-en="Facilities">Fasilitas</a>
+        <a href="index.html#kontak" class="font-head text-[13.5px] font-medium tracking-wide transition hover:text-green" data-id="Kontak" data-en="Contact">Kontak</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="flex rounded-full border border-ink/20" role="group" aria-label="Pilih bahasa">
+          <button type="button" data-lang-btn="id" class="lang-btn rounded-l-full px-3 py-1 font-head text-[11px] font-semibold tracking-wider transition" aria-pressed="true" aria-label="Bahasa Indonesia">ID</button>
+          <button type="button" data-lang-btn="en" class="lang-btn rounded-r-full px-3 py-1 font-head text-[11px] font-semibold tracking-wider transition" aria-pressed="false" aria-label="English language">EN</button>
+        </div>
+        <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="btn btn-green btn-sm hidden sm:inline-flex" data-id="Daftar" data-en="Apply">Daftar</a>
+        <button id="menuBtn" type="button" class="flex h-11 w-11 items-center justify-center border border-ink/20 xl:hidden" aria-expanded="false" aria-controls="mobileMenu" data-aria-id="Buka menu navigasi" data-aria-en="Open navigation menu" aria-label="Buka menu navigasi">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu: drawer layar penuh -->
+  <div id="mobileMenu" class="fixed inset-0 z-[60] hidden flex-col bg-paper xl:hidden">
+    <div class="mx-auto flex w-full max-w-site items-center justify-between px-6 py-4 md:px-12">
+      <span class="font-head text-[13px] font-bold uppercase tracking-[0.06em]">Teknik Industri</span>
+      <button id="menuClose" type="button" class="flex h-11 w-11 items-center justify-center border border-ink/20" data-aria-id="Tutup menu" data-aria-en="Close menu" aria-label="Tutup menu">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Navigasi seluler" class="mx-auto flex w-full max-w-site flex-1 flex-col items-start gap-1 overflow-y-auto px-6 py-4 md:px-12">
+      <div class="menu-group w-full">
+        <button type="button" class="menu-toggle h2 flex w-full items-center justify-between gap-4 py-2 text-left" aria-expanded="false" aria-controls="m-profil"><span data-id="Profil" data-en="Profile">Profil</span>
+          <svg class="caret h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul id="m-profil" class="menu-sub hidden">
+          <li><a href="index.html#tentang" class="menu-sub-link" data-id="Tentang Program" data-en="About the Program">Tentang Program</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-program-studi/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Profil Program Studi" data-en="Program Profile">Profil Program Studi</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-visi-misi-tujuan-sasaran/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Visi, Misi &amp; Tujuan" data-en="Vision, Mission &amp; Goals">Visi, Misi &amp; Tujuan</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-profil-lulusan/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Profil Lulusan" data-en="Graduate Profile">Profil Lulusan</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-pengelola-program-studi/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Pengelola Program Studi" data-en="Program Management">Pengelola Program Studi</a></li>
+          <li><a href="https://ft.untidar.ac.id/akreditasi/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Akreditasi" data-en="Accreditation">Akreditasi</a></li>
+        </ul>
+      </div>
+      <div class="menu-group w-full">
+        <button type="button" class="menu-toggle h2 flex w-full items-center justify-between gap-4 py-2 text-left" aria-expanded="false" aria-controls="m-akademik"><span data-id="Akademik" data-en="Academics">Akademik</span>
+          <svg class="caret h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul id="m-akademik" class="menu-sub hidden">
+          <li><a href="akademik.html#mata-kuliah" class="menu-sub-link" data-id="Mata Kuliah" data-en="Courses">Mata Kuliah</a></li>
+          <li><a href="index.html#kalender" class="menu-sub-link" data-id="Kalender Akademik" data-en="Academic Calendar">Kalender Akademik</a></li>
+          <li><a href="akademik.html#prosedur" class="menu-sub-link" data-id="Prosedur Akademik" data-en="Academic Procedures">Prosedur Akademik</a></li>
+          <li><a href="akademik.html#formulir" class="menu-sub-link" data-id="Formulir &amp; Unduhan" data-en="Forms &amp; Downloads">Formulir &amp; Unduhan</a></li>
+          <li><a href="https://ft.untidar.ac.id/capstone-design/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Capstone Design" data-en="Capstone Design">Capstone Design</a></li>
+        </ul>
+      </div>
+      <div class="menu-group w-full">
+        <button type="button" class="menu-toggle h2 flex w-full items-center justify-between gap-4 py-2 text-left" aria-expanded="false" aria-controls="m-dosen"><span data-id="Dosen" data-en="Lecturers">Dosen</span>
+          <svg class="caret h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul id="m-dosen" class="menu-sub hidden">
+          <li><a href="dosen.html" aria-current="page" class="menu-sub-link" data-id="Daftar Dosen" data-en="Lecturer Directory">Daftar Dosen</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-industri-s1-tenaga-kependidikan-program-studi/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Tenaga Kependidikan" data-en="Administrative Staff">Tenaga Kependidikan</a></li>
+        </ul>
+      </div>
+      <div class="menu-group w-full">
+        <button type="button" class="menu-toggle h2 flex w-full items-center justify-between gap-4 py-2 text-left" aria-expanded="false" aria-controls="m-kemahasiswaan"><span data-id="Kemahasiswaan" data-en="Student Affairs">Kemahasiswaan</span>
+          <svg class="caret h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul id="m-kemahasiswaan" class="menu-sub hidden">
+          <li><a href="https://ft.untidar.ac.id/kemahasiswaan/himpunan-mahasiswa/himpunan-mahasiswa-teknik-industri/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Himpunan Mahasiswa" data-en="Student Association">Himpunan Mahasiswa</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-mesin-s1-program-mbkm/" target="_blank" rel="noopener" class="menu-sub-link" data-id="MBKM" data-en="Independent Study (MBKM)">MBKM</a></li>
+          <li><a href="https://ft.untidar.ac.id/loker-ft/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Info Karir &amp; Loker" data-en="Career &amp; Jobs">Info Karir &amp; Loker</a></li>
+          <li><a href="kemahasiswaan.html#alumni" class="menu-sub-link" data-id="Alumni &amp; Tracer Study" data-en="Alumni &amp; Tracer Study">Alumni &amp; Tracer Study</a></li>
+          <li><a href="https://ft.untidar.ac.id/daftar-kerjasama/" target="_blank" rel="noopener" class="menu-sub-link" data-id="Daftar Kerjasama" data-en="Partnerships">Daftar Kerjasama</a></li>
+        </ul>
+      </div>
+      <a href="index.html#berita" class="menu-link h2 py-2" data-id="Berita" data-en="News">Berita</a>
+      <a href="https://ft.untidar.ac.id/teknik-mesin-s1-fasilitas/" target="_blank" rel="noopener" class="menu-link h2 py-2" data-id="Fasilitas" data-en="Facilities">Fasilitas</a>
+      <a href="index.html#kontak" class="menu-link h2 py-2" data-id="Kontak" data-en="Contact">Kontak</a>
+    </nav>
+    <div class="mx-auto w-full max-w-site px-6 pb-10 md:px-12">
+      <a href="https://um.untidar.ac.id/" target="_blank" rel="noopener" class="btn btn-green w-full justify-center" data-id="Daftar Sekarang" data-en="Apply Now">Daftar Sekarang</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- Intro halaman: H1 + sumber data asimetris 8/4 -->
+    <section id="atas">
+      <div class="mx-auto w-full max-w-site px-6 pb-16 pt-16 md:px-12 md:pb-20 md:pt-24">
+        <div class="grid gap-8 lg:grid-cols-12 lg:gap-8">
+          <div class="lg:col-span-8">
+            <p class="kicker reveal" data-id="Profil Dosen / Teknik Industri Untidar" data-en="Lecturer Profiles / Industrial Engineering Untidar">Profil Dosen / Teknik Industri Untidar</p>
+            <h1 class="h1 mt-6 reveal" style="--d:.08s" data-id="Dosen Program Studi" data-en="Program Lecturers">Dosen Program Studi</h1>
+            <p class="mt-7 max-w-xl text-muted reveal" style="--d:.16s" data-id="Daftar dosen Program Studi S1 Teknik Industri beserta jabatan fungsional akademiknya, mengikuti data resmi Fakultas Teknik Universitas Tidar." data-en="The lecturers of the Bachelor of Industrial Engineering program with their academic functional positions, following the official data of the Faculty of Engineering, Universitas Tidar.">Daftar dosen Program Studi S1 Teknik Industri beserta jabatan fungsional akademiknya, mengikuti data resmi Fakultas Teknik Universitas Tidar.</p>
+          </div>
+          <div class="lg:col-span-4 lg:pt-28">
+            <p class="text-sm text-muted reveal" style="--d:.24s" data-id="*Nama dan jabatan mengikuti data resmi FT UNTIDAR." data-en="*Names and positions follow official FT UNTIDAR data.">*Nama dan jabatan mengikuti data resmi FT UNTIDAR.</p>
+            <a href="https://ft.untidar.ac.id/teknik-industri-s1-dosen-program-studi/" target="_blank" rel="noopener" class="ghost mt-5 inline-flex reveal" style="--d:.32s"><span data-id="Daftar dosen resmi di website FT" data-en="Official lecturer list on the FT website">Daftar dosen resmi di website FT</span><svg class="arrow h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01: Daftar Dosen (kartu foto, nama, jabatan, tautan profil) -->
+    <section id="dosen-list" class="border-y border-line section-pad">
+      <div class="mx-auto w-full max-w-site px-6 md:px-12">
+        <header class="mb-12 grid items-end gap-5 md:grid-cols-12">
+          <div class="md:col-span-8">
+            <p class="kicker reveal"><span class="text-muted">01</span>&nbsp;&nbsp;<span data-id="Daftar Dosen" data-en="Lecturer Directory">Daftar Dosen</span></p>
+          </div>
+          <p class="text-sm text-muted md:col-span-4 md:text-right reveal" style="--d:.08s" data-id="*Foto dan tautan profil akademik masih tahap pengisian." data-en="*Photos and academic profile links are being filled in.">*Foto dan tautan profil akademik masih tahap pengisian.</p>
+        </header>
+
+        <!-- TODO: isi URL Google Scholar, Sinta, dan Scopus per dosen; URL Sinta resmi tercatat di komentar tiap kartu -->
+        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+          <article class="card group reveal" style="cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Ir. Julian Anindito Widiatmoko, S.T., M.Eng." data-en="Ir. Julian Anindito Widiatmoko, S.T., M.Eng.">Ir. Julian Anindito Widiatmoko, S.T., M.Eng.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdikbud.go.id/authors/profile/6825325 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.06s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Ir. Muhammad Rifqi Maarif, S.T., M.Eng." data-en="Ir. Muhammad Rifqi Maarif, S.T., M.Eng.">Ir. Muhammad Rifqi Maarif, S.T., M.Eng.</h3>
+              <p class="kicker mt-2" data-id="Lektor" data-en="Lecturer">Lektor</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdikbud.go.id/authors/profile/5973824 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.12s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Ir. Nila Nurlina, S.T., M.T." data-en="Ir. Nila Nurlina, S.T., M.T.">Ir. Nila Nurlina, S.T., M.T.</h3>
+              <p class="kicker mt-2" data-id="Lektor" data-en="Lecturer">Lektor</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdikbud.go.id/authors/profile/6805974 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Ir. M. Fendy Kussuma Hadi Sufyan, S.Pd., M.T." data-en="Ir. M. Fendy Kussuma Hadi Sufyan, S.Pd., M.T.">Ir. M. Fendy Kussuma Hadi Sufyan, S.Pd., M.T.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdikbud.go.id/authors/profile/6734224 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.06s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Ir. Rizqa Ula Fahadha, S.T., M.T." data-en="Ir. Rizqa Ula Fahadha, S.T., M.T.">Ir. Rizqa Ula Fahadha, S.T., M.T.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdiktisaintek.go.id/authors/profile/6663178 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.12s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Tri Retno Setiyawati, S.T., M.Sc." data-en="Tri Retno Setiyawati, S.T., M.Sc.">Tri Retno Setiyawati, S.T., M.Sc.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdikbud.go.id/authors/profile/6825261 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Anirawilda Purba, S.T., M.Sc." data-en="Anirawilda Purba, S.T., M.Sc.">Anirawilda Purba, S.T., M.Sc.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdikbud.go.id/authors/profile/6933271 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.06s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Her Tafga Arfanindita, S.T., M.T." data-en="Her Tafga Arfanindita, S.T., M.T.">Her Tafga Arfanindita, S.T., M.T.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdikbud.go.id/authors/profile/6917975 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.12s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Siti Mardiyah, S.T., M.T." data-en="Siti Mardiyah, S.T., M.T.">Siti Mardiyah, S.T., M.T.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Ir. Welly Mahardhika, S.T., M.T., IPM." data-en="Ir. Welly Mahardhika, S.T., M.T., IPM.">Ir. Welly Mahardhika, S.T., M.T., IPM.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdikbud.go.id/authors/profile/6919378 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.06s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Fakhril Husain, S.T., M.Sc." data-en="Fakhril Husain, S.T., M.Sc.">Fakhril Husain, S.T., M.Sc.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.12s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Grita Supriyanto Dewi, S.T., M.Sc." data-en="Grita Supriyanto Dewi, S.T., M.Sc.">Grita Supriyanto Dewi, S.T., M.Sc.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdiktisaintek.go.id/authors?q=Grita+Supriyanto+Dewi -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Muhammad Syarqim Mahfudz, S.T., M.Sc." data-en="Muhammad Syarqim Mahfudz, S.T., M.Sc.">Muhammad Syarqim Mahfudz, S.T., M.Sc.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdiktisaintek.go.id/authors/profile/6852358 -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card group reveal" style="--d:.06s; cursor: default">
+            <div class="media aspect-[2/3]"><span class="media-label absolute inset-0 flex items-center justify-center font-head text-[11px] uppercase tracking-[0.2em]">[Foto]</span></div>
+            <div class="p-6">
+              <h3 class="h3 min-h-[44px] text-[17px]" data-id="Nofitasari Damayanti Karini, S.T., M.T." data-en="Nofitasari Damayanti Karini, S.T., M.T.">Nofitasari Damayanti Karini, S.T., M.T.</h3>
+              <p class="kicker mt-2" data-id="Asisten Ahli" data-en="Assistant Professor">Asisten Ahli</p>
+              <!-- TODO: profil Sinta (data resmi): https://sinta.kemdiktisaintek.go.id/authors?q=nofitasari+damayanti+karini -->
+              <ul class="mt-5 border-t border-line text-sm text-muted">
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Google Scholar</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Sinta</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+                <li class="flex items-center justify-between gap-3 border-b border-line py-2.5"><span>Scopus</span><span class="pill text-brown" data-id="Segera" data-en="Soon">Segera</span></li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="mt-8 text-xs text-muted reveal" data-id="Foto akan diisi dari data resmi program studi. Tautan Google Scholar, Sinta, dan Scopus per dosen menyusul setelah tersedia." data-en="Photos will be filled from official program data. Per-lecturer Google Scholar, Sinta, and Scopus links will follow once available.">Foto akan diisi dari data resmi program studi. Tautan Google Scholar, Sinta, dan Scopus per dosen menyusul setelah tersedia.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer: 4 kolom -->
+  <footer id="kontak" class="bg-ink text-paper">
+    <div class="mx-auto grid w-full max-w-site gap-10 px-6 py-16 md:grid-cols-2 md:px-12 lg:grid-cols-4">
+      <div>
+        <p class="font-head text-[13px] font-bold uppercase leading-[1.15] tracking-[0.06em]">
+          <span class="block">Teknik Industri</span>
+          <span class="block text-gold">Untidar</span>
+        </p>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-paper/70" data-id="Program Studi S1 Teknik Industri, Fakultas Teknik, Universitas Tidar, Kota Magelang, Jawa Tengah." data-en="Bachelor of Industrial Engineering, Faculty of Engineering, Universitas Tidar, Magelang, Central Java.">Program Studi S1 Teknik Industri, Fakultas Teknik, Universitas Tidar, Kota Magelang, Jawa Tengah.</p>
+      </div>
+
+      <nav aria-label="Navigasi footer">
+        <p class="kicker kicker-gold" data-id="Navigasi" data-en="Navigation">Navigasi</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-paper/70">
+          <li><a href="index.html#tentang" class="transition hover:text-paper" data-id="Program" data-en="Program">Program</a></li>
+          <li><a href="akademik.html" class="transition hover:text-paper" data-id="Akademik" data-en="Academics">Akademik</a></li>
+          <li><a href="dosen.html" aria-current="page" class="transition hover:text-paper" data-id="Dosen" data-en="Lecturers">Dosen</a></li>
+          <li><a href="kemahasiswaan.html" class="transition hover:text-paper" data-id="Kemahasiswaan" data-en="Student Affairs">Kemahasiswaan</a></li>
+          <li><a href="index.html#berita" class="transition hover:text-paper" data-id="Berita" data-en="News">Berita</a></li>
+          <li><a href="https://ft.untidar.ac.id/teknik-mesin-s1-fasilitas/" target="_blank" rel="noopener" class="transition hover:text-paper" data-id="Fasilitas" data-en="Facilities">Fasilitas</a></li>
+          <li><a href="index.html#kontak" class="transition hover:text-paper" data-id="Kontak" data-en="Contact">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <p class="kicker kicker-gold" data-id="Kontak" data-en="Contact">Kontak</p>
+        <address class="mt-5 space-y-3 text-sm not-italic leading-relaxed text-paper/70">
+          <p data-id="Lobby Fakultas Teknik, Jl. Kapten Suparman 39 Potrobangsan, Magelang Utara, Jawa Tengah 56116" data-en="Faculty of Engineering Lobby, Jl. Kapten Suparman 39 Potrobangsan, North Magelang, Central Java 56116">Lobby Fakultas Teknik, Jl. Kapten Suparman 39 Potrobangsan, Magelang Utara, Jawa Tengah 56116</p>
+          <p data-id="Telp. (0293) 364113 · WA 0813-9347-1791" data-en="Tel. (0293) 364113 · WA 0813-9347-1791">Telp. (0293) 364113 · WA 0813-9347-1791</p>
+        </address>
+        <a href="https://ft.untidar.ac.id/kontak/" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 font-head text-[13px] font-medium text-gold transition hover:text-paper"><span data-id="Halaman kontak FT" data-en="FT contact page">Halaman kontak FT</span><svg class="arrow h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0l-6-6m6 6l-6 6"/></svg></a>
+      </div>
+
+      <div>
+        <p class="kicker kicker-gold" data-id="Sosial" data-en="Social">Sosial</p>
+        <ul class="mt-5 space-y-2.5 text-sm text-paper/70">
+          <li><a href="https://www.instagram.com/ftuntidar" target="_blank" rel="noopener" class="inline-flex items-center gap-2 transition hover:text-paper"><span aria-hidden="true" class="inline-block h-1.5 w-1.5 bg-gold"></span>Instagram</a></li>
+          <li><a href="https://www.youtube.com/@fakultasteknikuntidar8841" target="_blank" rel="noopener" class="inline-flex items-center gap-2 transition hover:text-paper"><span aria-hidden="true" class="inline-block h-1.5 w-1.5 bg-gold"></span>YouTube</a></li>
+          <li><a href="https://www.facebook.com/untidar" target="_blank" rel="noopener" class="inline-flex items-center gap-2 transition hover:text-paper"><span aria-hidden="true" class="inline-block h-1.5 w-1.5 bg-gold"></span>Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-paper/10">
+      <div class="mx-auto flex w-full max-w-site flex-col gap-2 px-6 py-5 text-[11px] uppercase tracking-[0.12em] text-paper/50 md:flex-row md:items-center md:justify-between md:px-12">
+        <p data-id="© 2026 Teknik Industri Untidar · Magelang" data-en="© 2026 Industrial Engineering Untidar · Magelang">© 2026 Teknik Industri Untidar · Magelang</p>
+        <p data-id="Fakultas Teknik · Universitas Tidar" data-en="Faculty of Engineering · Universitas Tidar">Fakultas Teknik · Universitas Tidar</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* --- Toggle bahasa ID/EN (data-id / data-en + localStorage) --- */
+      var LANG_KEY = 'ti-untidar-lang';
+      function applyLang(lang) {
+        document.querySelectorAll('[data-id]').forEach(function (el) {
+          var v = el.getAttribute(lang === 'en' ? 'data-en' : 'data-id');
+          if (v !== null) el.textContent = v;
+        });
+        document.querySelectorAll('[data-aria-id]').forEach(function (el) {
+          el.setAttribute('aria-label', el.getAttribute(lang === 'en' ? 'data-aria-en' : 'data-aria-id'));
+        });
+        document.documentElement.setAttribute('lang', lang);
+        document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
+          var on = b.getAttribute('data-lang-btn') === lang;
+          b.classList.toggle('is-on', on);
+          b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+      }
+      var savedLang = 'id';
+      try { savedLang = localStorage.getItem(LANG_KEY) || 'id'; } catch (e) {}
+      applyLang(savedLang === 'en' ? 'en' : 'id');
+      document.querySelectorAll('[data-lang-btn]').forEach(function (b) {
+        b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang-btn')); });
+      });
+
+      /* --- Nav desktop: dropdown (buka saat hover, fokus, atau klik caret) --- */
+      var navDrops = document.querySelectorAll('.nav-drop');
+      var suppressOpen = false;
+      function closeNavDrops(except) {
+        navDrops.forEach(function (d) {
+          if (d === except) return;
+          d.classList.remove('is-open');
+          var c = d.querySelector('.nav-caret');
+          if (c) c.setAttribute('aria-expanded', 'false');
+        });
+      }
+      navDrops.forEach(function (d) {
+        var caret = d.querySelector('.nav-caret');
+        function setOpen(open) {
+          if (open) closeNavDrops(d);
+          d.classList.toggle('is-open', open);
+          if (caret) caret.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        d.addEventListener('mouseenter', function () { setOpen(true); });
+        d.addEventListener('mouseleave', function () { setOpen(false); });
+        d.addEventListener('focusin', function () { if (suppressOpen) return; setOpen(true); });
+        d.addEventListener('focusout', function (e) {
+          if (!d.contains(e.relatedTarget)) setOpen(false);
+        });
+        if (caret) {
+          caret.addEventListener('click', function () { setOpen(!d.classList.contains('is-open')); });
+        }
+        d.querySelectorAll('.nav-panel a').forEach(function (a) {
+          a.addEventListener('click', function () { setOpen(false); });
+        });
+      });
+      document.addEventListener('click', function (e) {
+        var t = e.target;
+        if (!(t && t.closest && t.closest('.nav-drop'))) closeNavDrops(null);
+      });
+
+      /* --- Menu mobile: drawer layar penuh + accordion submenu --- */
+      var menuBtn = document.getElementById('menuBtn');
+      var menuClose = document.getElementById('menuClose');
+      var mobileMenu = document.getElementById('mobileMenu');
+      function setMenu(open) {
+        mobileMenu.classList.toggle('hidden', !open);
+        mobileMenu.classList.toggle('flex', open);
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+        if (open) { menuClose.focus(); } else { menuBtn.focus(); }
+      }
+      menuBtn.addEventListener('click', function () { setMenu(mobileMenu.classList.contains('hidden')); });
+      menuClose.addEventListener('click', function () { setMenu(false); });
+      mobileMenu.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { setMenu(false); });
+      });
+      mobileMenu.querySelectorAll('.menu-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          var panel = document.getElementById(btn.getAttribute('aria-controls'));
+          if (panel) panel.classList.toggle('hidden', expanded);
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        var openDrop = document.querySelector('.nav-drop.is-open');
+        if (openDrop) {
+          var oc = openDrop.querySelector('.nav-caret');
+          suppressOpen = true;
+          closeNavDrops(null);
+          if (oc) oc.focus();
+          suppressOpen = false;
+          return;
+        }
+        if (!mobileMenu.classList.contains('hidden')) setMenu(false);
+      });
+
+      /* --- Header: border-bottom saat scroll > 20px --- */
+      var header = document.getElementById('siteHeader');
+      function onScroll() { header.classList.toggle('scrolled', window.scrollY > 20); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* --- Scroll reveal: fade + translateY 16px, 500ms --- */
+      var revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var revealIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealIO.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { revealIO.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+    })();
+  </script>
+</body>
+</html>
